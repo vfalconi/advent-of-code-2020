@@ -2,7 +2,6 @@ const input = require('./input');
 const { findAddends } = require('./findAddends');
 const sum = 2020;
 
-
 const a = (numbers) => {
 	const entries = findAddends(numbers, sum);
 	return entries.reduce((acc, curr) => acc * curr);
@@ -11,7 +10,7 @@ const a = (numbers) => {
 const b = (numbers) => {
 	const entries = [];
 	numbers.forEach(num => {
-		const newSum = 2020 - num;
+		const newSum = sum - num;
 		const addends = findAddends(numbers, newSum);
 		if (addends.length > 0) {
 			entries.concat(addends);
