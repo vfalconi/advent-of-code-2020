@@ -1,10 +1,5 @@
 const input = require('./input');
-
-const deepCopy = (arr) => {
-	return arr.map(item => {
-		return {...item};
-	});
-};
+const { deepCopy } = require('../helpers');
 
 const runInstructions = (input) => {
 	const instructions = deepCopy(input);
